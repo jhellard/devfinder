@@ -14,6 +14,7 @@ module.exports = {
         darkBlue: "#0079FF",
         grayishBlue: "#697C9A",
         error: "#F74646",
+        buttonHover: "#60ABFF",
       },
     },
   },
