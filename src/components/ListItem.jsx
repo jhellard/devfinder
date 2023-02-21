@@ -14,7 +14,7 @@ const ListItem = ({ data, img, alt, order }) => {
     >
       <img
         className={`${
-          img === "/src/assets/icon-location.svg" && "mr-[6px]"
+          alt === "Location" && "mr-[6px]"
         } dark:invert-[98%] dark:sepia dark:saturate dark:hue-rotate-[8deg] dark:brightness-0 dark:contrast-[105%]`}
         src={img}
         alt={`${alt} Icon`}

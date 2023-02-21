@@ -1,6 +1,14 @@
 import Search from "../assets/icon-search.svg";
+import { useQueryClient } from "@tanstack/react-query";
 
-const SearchBar = ({ handleInput, inputRef, isError }) => {
+const SearchBar = ({ inputRef, isError }) => {
+  const queryClient = useQueryClient();
+
+  const handleInput = (e) => {
+    e.preventDefault();
+    queryClient.invalidateQueries(["user"]);
+  };
+
   return (
     <form
       onSubmit={(e) => handleInput(e)}
@@ -14,6 +22,7 @@ const SearchBar = ({ handleInput, inputRef, isError }) => {
       <input
         type="text"
         ref={inputRef}
+        required
         className="w-full placeholder:text-lightBlue cursor-pointer focus:cursor-auto dark:text-white placeholder:text-[13px] sm:placeholder:text-[18px] focus:outline-none caret-darkBlue bg-transparent dark:placeholder:text-white"
         placeholder="Search GitHub username…"
       />

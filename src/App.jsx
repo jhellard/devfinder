@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import axios from "axios";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import moment from "moment";
 
 import Location from "./assets/icon-location.svg";
@@ -14,7 +14,6 @@ import Stats from "./components/Stats";
 import SearchBar from "./components/SearchBar";
 
 const App = () => {
-  const queryClient = useQueryClient();
   const userInput = useRef("octocat");
 
   const { isLoading, isError, data } = useQuery(["user"], () =>
@@ -29,18 +28,6 @@ const App = () => {
       .then((res) => res.data)
   );
 
-  const handleInput = (e) => {
-    e.preventDefault();
-    queryClient.invalidateQueries(["user"]);
-  };
-
-  const handleThemeSwitch = () => {
-    const body = document.querySelector("body");
-    document.querySelector("#root").classList.toggle("dark");
-    body.classList.toggle("bg-lightBg");
-    body.classList.toggle("bg-darkBg");
-  };
-
   if (isLoading)
     return (
       <main className="min-w-screen min-h-screen grid place-items-center">
@@ -50,13 +37,9 @@ const App = () => {
 
   return (
     <>
-      <Header handleThemeSwitch={handleThemeSwitch} />
+      <Header />
       <main className="max-w-[621px] md:max-w-[778px] mx-auto">
-        <SearchBar
-          handleInput={handleInput}
-          inputRef={userInput}
-          isError={isError}
-        />
+        <SearchBar inputRef={userInput} isError={isError} />
         <section className="mx-6 bg-veryLightWhite rounded-2xl pt-8 mb-8 px-6 md:px-12 shadow-lg dark:bg-darkModeBlue md:flex gap-[37px]">
           <img
             className="max-w-[117px] max-h-[117px] rounded-full hidden md:block"
