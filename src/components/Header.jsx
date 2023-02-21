@@ -7,7 +7,7 @@ const Header = () => {
   };
 
   return (
-    <header className="pt-8 pb-9 px-6 bg-transparent flex items-center max-w-[621px] md:max-w-[778px] mx-auto">
+    <header className="pt-8 sm:pt-0 pb-9 px-6 bg-transparent flex items-center max-w-[621px] md:max-w-[778px] mx-auto">
       <span className="text-[26px] font-bold text-lightHeader mr-auto dark:text-white">
         devfinder
       </span>

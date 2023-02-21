@@ -40,7 +40,7 @@ const App = () => {
       <Header />
       <main className="max-w-[621px] md:max-w-[778px] mx-auto">
         <SearchBar inputRef={userInput} isError={isError} />
-        <section className="mx-6 bg-veryLightWhite rounded-2xl pt-8 mb-8 px-6 md:px-12 shadow-lg dark:bg-darkModeBlue md:flex gap-[37px]">
+        <section className="mx-6 bg-veryLightWhite rounded-2xl pt-8 mb-8 sm:mb-0 px-6 md:px-12 shadow-lg dark:bg-darkModeBlue md:flex gap-[37px]">
           <img
             className="max-w-[117px] max-h-[117px] rounded-full hidden md:block"
             src={data.avatar_url}

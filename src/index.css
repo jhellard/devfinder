@@ -6,8 +6,4 @@
   html {
     font-family: "Space Mono", monospace;
   }
-
-  body {
-    min-height: 100vh;
-  }
 }
