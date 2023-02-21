@@ -63,9 +63,9 @@ const App = () => {
                     {data.company}
                   </span>
                 )}
-                <h3 className="text-[13px] text-grayishBlue dark:text-white sm:text-[15px] md:col-start-2 md:row-start-1 justify-self-end self-center">
+                <h2 className="text-[13px] text-grayishBlue dark:text-white sm:text-[15px] md:col-start-2 md:row-start-1 justify-self-end self-center">
                   Joined {moment(data.created_at).format("D MMM YY")}
-                </h3>
+                </h2>
               </div>
             </div>
             <p className="text-[13px] text-lightBlue mb-6 dark:text-white sm:text-[15px] sm:mb-8">
