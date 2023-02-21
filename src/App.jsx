@@ -40,7 +40,7 @@ const App = () => {
       <Header />
       <main className="max-w-[621px] md:max-w-[778px] mx-auto">
         <SearchBar inputRef={userInput} isError={isError} />
-        <section className="mx-6 bg-veryLightWhite rounded-2xl pt-8 mb-8 sm:mb-0 px-6 sm:px-10 md:px-12 shadow-lg dark:bg-darkModeBlue md:flex gap-[37px]">
+        <section className="mx-6 bg-veryLightWhite rounded-2xl pt-8 sm:pt-10 md:pt-12 mb-8 sm:mb-0 px-6 sm:px-10 md:px-12 shadow-lg dark:bg-darkModeBlue md:flex gap-[37px]">
           <img
             className="max-w-[117px] max-h-[117px] rounded-full hidden md:block"
             src={data.avatar_url}
@@ -76,7 +76,7 @@ const App = () => {
               <Stats name="Followers" data={data.followers} spacing={82} />
               <Stats name="Following" data={data.following} />
             </ul>
-            <ul className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-5 pb-12 sm:pb-10 sm:gap-x-12">
+            <ul className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-5 pb-12 sm:pb-10 md:pb-12 sm:gap-x-12">
               <ListItem
                 data={data.location}
                 img={Location}
